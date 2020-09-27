@@ -1,3 +1,4 @@
+import './assets/reset.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
