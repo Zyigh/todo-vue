@@ -10,7 +10,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    todos: []
+    todos: [],
+    error: null
   },
   mutations: {
     ADD_TODO(state, todo) {
@@ -39,11 +40,17 @@ export default new Vuex.Store({
       if (indexToModifiy > -1) {
         state.todos[indexToModifiy] = todo;
       }
+    },
+
+    // ERROR
+    REMOVE_ERROR(state) {
+      state.error = null;
     }
   },
   actions,
   modules: {},
   getters: {
-    allTodos: state => state.todos
+    allTodos: state => state.todos,
+    error: state => state.error
   }
 });

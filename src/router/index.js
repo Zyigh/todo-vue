@@ -9,7 +9,12 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    beforeRouteEnter: (to, from, next) => {
+      next(vm => {
+        vm.$store.dispatch("getAllTodos");
+      });
+    }
   },
   {
     path: "*",
